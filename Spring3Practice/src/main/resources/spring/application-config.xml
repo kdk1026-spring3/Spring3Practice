@@ -16,7 +16,7 @@
 	
 	<util:properties id="env" location="classpath:properties/env.properties" />
 	<util:properties id="file" location="classpath:properties/file.properties" />
-	<util:properties id="jwtProp" location="classpath:properties/jwt.properties" />
+	<util:properties id="jwt" location="classpath:properties/jwt.properties" />
 	
 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
 		p:basename="classpath:locale/messages"

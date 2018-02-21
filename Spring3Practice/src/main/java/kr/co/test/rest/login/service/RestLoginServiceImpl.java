@@ -40,7 +40,7 @@ public class RestLoginServiceImpl extends LogDeclare implements RestLoginService
 	@Autowired
 	private JwtTokenComponent jwtTokenComponent;
 	
-	@Value("#{jwtProp}")
+	@Value("#{jwt}")
 	private Properties jwtProp;
 	
 	@Override

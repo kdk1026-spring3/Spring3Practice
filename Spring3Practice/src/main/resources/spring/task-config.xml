@@ -11,7 +11,7 @@
 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
 	">
 
-	<task:annotation-driven executor="taskExecutor" scheduler="taskScheduler" />
+	<task:annotation-driven executor="taskExecutor" />
     
 	<!--
 		- ABORT				: Exception Throw (Default)
@@ -20,7 +20,5 @@
 		- DISCARD_OLDEST	: 해당 Application이 과부하 상태일 경우 Queue의 Head에 있는 Task의 실행을 Skip
 	-->    
 	<task:executor id="taskExecutor" pool-size="5-50" queue-capacity="10" keep-alive="120" rejection-policy="CALLER_RUNS" />
-	
-	<task:scheduler id="taskScheduler" pool-size="5" />
 		
 </beans>
