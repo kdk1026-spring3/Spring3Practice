@@ -28,7 +28,7 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
 	
 	private static final String DEFAULT_FILTER_PROCESSES_URL = "/api/**";
 	
-	protected JwtAuthenticationTokenFilter() {
+	public JwtAuthenticationTokenFilter() {
 		super(DEFAULT_FILTER_PROCESSES_URL);
 	}
 

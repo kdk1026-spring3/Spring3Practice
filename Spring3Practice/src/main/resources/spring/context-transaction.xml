@@ -16,10 +16,15 @@
 	<!-- H2 -->
 	<tx:advice id="h2_txAdvice" transaction-manager="h2_transactionManager">
 		<tx:attributes>
-			<tx:method name="list*" read-only="true" />
 			<tx:method name="get*" read-only="true" />
+			<tx:method name="count*" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="list*" read-only="true" />
+			<tx:method name="*" read-only="true" />
 			<tx:method name="add*" rollback-for="Exception" />
+			<tx:method name="save*" rollback-for="Exception" />
 			<tx:method name="modify*" rollback-for="Exception" />
+			<tx:method name="edit*" rollback-for="Exception" />
 			<tx:method name="remove*" rollback-for="Exception" />
 			<tx:method name="process*" rollback-for="Exception" />
 		</tx:attributes>
