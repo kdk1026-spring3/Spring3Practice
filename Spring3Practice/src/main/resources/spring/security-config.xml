@@ -68,11 +68,10 @@
 
 		<security:csrf />
 
+		<security:intercept-url pattern="/**" access="permitAll" />
 		<security:intercept-url pattern="/admin/login" access="permitAll" />
 		<security:intercept-url pattern="/admin/**" access="isAuthenticated()" />
 		<security:intercept-url pattern="/admin/managerRemoveProcess" access="hasRole('ROLE_ADMIN')" />
-		
-		<security:intercept-url pattern="/**" access="permitAll" />
 		
 		<!-- XXX: 로그인 처리만 https로 하는 경우 -->
 		<!--  

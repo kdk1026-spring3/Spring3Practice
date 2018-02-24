@@ -44,8 +44,11 @@
 	
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 	
+	<!-- maxUploadSize = 20MB -->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		p:defaultEncoding="UTF-8"
+		p:maxUploadSize="20971520"
+		p:maxInMemorySize="20971520"
 	/>
 	
 	<!-- message-converter 참조 : Jaxb 의 @XmlRootElement 무시, classpath 로 표기 -->
@@ -68,7 +71,7 @@
 	</mvc:interceptors>
 	
 	<import resource="view-config.xml"/>
-	<!-- <import resource="contentNegotiation-config.xml"/> -->
+	<import resource="contentNegotiation-config.xml"/>
 	<import resource="tiles-config.xml"/>		<!-- JUnit 테스트 시, 주석 처리 -->
 	<import resource="locale-config.xml"/>
 	

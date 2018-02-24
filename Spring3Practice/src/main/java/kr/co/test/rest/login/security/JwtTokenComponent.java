@@ -21,7 +21,7 @@ import kr.co.test.page.login.model.AuthenticatedUser;
 @Component
 public class JwtTokenComponent {
 	
-	@Value("#{jwtProp}")
+	@Value("#{jwt}")
 	private Properties jwtProp;
 	
 	public static class JwtToken {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemesh>
 
-	<mapping path="/template/sitemesh" decorator="/WEB-INF/jsp/template/sample/sample_decorator.jsp" />
+	<mapping path="/layout/sitemesh" decorator="/WEB-INF/jsp/template/sample/sample_decorator.jsp" />
 
 	<mapping>
 		<path>/admin/login</path>

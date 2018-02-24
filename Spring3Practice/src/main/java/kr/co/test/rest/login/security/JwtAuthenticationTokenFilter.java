@@ -34,10 +34,10 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
 
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@Value("#{jwtProp['jwt.tokenType']}")
+	@Value("#{jwt['jwt.tokenType']}")
 	private String tokenType;
 	
-	@Value("#{jwtProp['jwt.header']}")
+	@Value("#{jwt['jwt.header']}")
 	private String header;
 	
 	@Autowired
