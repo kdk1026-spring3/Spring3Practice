@@ -19,8 +19,8 @@ See here for more details: http://gordondickens.com/wordpress/2013/03/27/sawing-
 	<!-- Spring Framework -->
     <logger name="org.springframework" level="error" />
     
-    <logger name="org.apache.ibatis.session" level="error" />
-    <logger name="org.mybatis.spring.SqlSessionUtils" level="debug" />
+    <logger name="org.mybatis.spring.SqlSessionUtils" level="error" />
+    <logger name="org.springframework.jdbc.datasource.DataSourceTransactionManager" level="debug" />
     
     <!-- SQL Loggin -->
     <logger name="java.sql" level="error" />
