@@ -16,25 +16,5 @@ public class JwtAuthenticationToken extends UsernamePasswordAuthenticationToken 
 	public String getToken() {
 		return token;
 	}
-
-	@Override
-	public Object getCredentials() {
-		return super.getCredentials();
-	}
-
-	@Override
-	public Object getPrincipal() {
-		return super.getPrincipal();
-	}
-
-	@Override
-	public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
-		super.setAuthenticated(isAuthenticated);
-	}
-
-	@Override
-	public void eraseCredentials() {
-		super.eraseCredentials();
-	}
 	
 }
