@@ -20,7 +20,7 @@ public class CookieController extends LogDeclare {
 	@ResponseBody
 	@RequestMapping("/set")
 	public String set(HttpServletResponse response) {
-		CookieUtilVer1.addCookie(response, TEST_COOKIE_KEY, "test", (60*5), true);
+		CookieUtilVer1.addCookie(response, TEST_COOKIE_KEY, "test", (60*5), false, false, null);
 		
 		return "Cookie Set Test";
 	}
@@ -28,7 +28,7 @@ public class CookieController extends LogDeclare {
 	@ResponseBody
 	@RequestMapping("/get")
 	public String get(ParamCollector paramCollector) {
-		String msg = CookieUtilVer1.getCookie(paramCollector.getRequest(), TEST_COOKIE_KEY);
+		String msg = CookieUtilVer1.getCookieValue(paramCollector.getRequest(), TEST_COOKIE_KEY);
 		
 		return msg;
 	}
